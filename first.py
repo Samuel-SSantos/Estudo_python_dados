@@ -1,1 +1,4 @@
-print("Este é o meu primeiro programa!")
+tarefa = input("Digite uma tarefa: ")
+
+print("Tarefa foi adicionada!")
+print("Tarefas: ", tarefa)
