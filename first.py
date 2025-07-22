@@ -1,9 +1,11 @@
 while True:
-  opcao = input("Digite uma tarefa (ou 'sair' para finalizar): ")
-  if opcao.lower() == 'sair':
-    break
-tarefa = opcao
+    opcao = input("Digite uma tarefa (ou 'sair' para finalizar): ")
+    if opcao.lower() == 'sair':
+        break
+  
+    tarefas.append (opcao)
+    print("Tarefa adicionada: ", opcao)
 
-print("Tarefa adicionada: ", tarefa)
-
-print("ultima tarefa adicionada: ", tarefa)
+print('Lista de Tarefas: ')
+for tarefa in tarefas:
+    print('-', tarefa)
