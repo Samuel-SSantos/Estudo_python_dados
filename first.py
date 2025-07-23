@@ -7,20 +7,29 @@ while True:
 
     opcao = input("Escolha uma opção: ")
     if opcao == '1':
-        tarefa = input("Digite uma tarefa: ")
+        nome = input("Digite o nome da tarefa: ")
+        prioridade = input("Digite a prioridade da tarefa: ")
+
+        tarefa = {
+            'nome' = nome,
+            'prioridade' = prioridade
+        }
+
         tarefas.append(tarefa)
         print("Tarefa adiconada: ", tarefa)
 
     elif opcao == '2':
         print("Lista de tarefas: ")
         for tarefa in tarefas:
-            print("-", tarefa)
+            print(f"- {tarefa['nome']} (prioridade {tarefa['prioridade']})")
 
     elif opcao == '3':
-        tarefa = input ("Digite a tarefa a ser removida: ")
-        if tarefa in tarefas:
+        nome = input ("Digite o nome da tarefa a ser removida: ")
+        for tarefa in tarefas:
+            if tarefa ['nome'] == nome:
             tarefas.remove(tarefa) 
-            print("Tarefa removida: ", tarefa)
+            print("Tarefa removida: ", nome)
+            break
         else: 
             print("Tarefa não encontrada")
 
@@ -29,4 +38,4 @@ while True:
         break
     
     else:
-        print("Opção invalida!")1
+        print("Opção invalida!")
